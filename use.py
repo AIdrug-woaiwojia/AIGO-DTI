@@ -8,11 +8,9 @@ def loaddata():
     dataClass = DataClass(dataPath='data',
                           pSeqMaxLen=1024, dSeqMaxLen=128)
 
-    # 从文件中加载数据
+    # load
     with open('data.pkl', 'rb') as file:
         loaded_data = pickle.load(file)
-    #
-    # 从 loaded_data 字典中获取需要的数据
     dataClass.pSeqTokenized = loaded_data['pSeqTokenized']
     dataClass.pSeqTokenized_k = loaded_data['pSeqTokenized_k']
     dataClass.pContFeat = loaded_data['pContFeat']
