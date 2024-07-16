@@ -10,7 +10,7 @@ def train(args,log):
                                  sep=' ')
     model = AIGO_DTI(args=args,log=log,cSize=dataClass.pContFeat.shape[1])
     res = model.train(dataClass, args=args,stopRounds=-1,log=log,
-            savePath='BridgeDTI', metrics="AUC", report=["ACC", "AUC", "LOSS",'F1','Precision','AUPR'],
+            savePath='AIGO_DTI', metrics="AUC", report=["ACC", "AUC", "LOSS",'F1','Precision','AUPR'],
             preheat=0)
     return res
 
